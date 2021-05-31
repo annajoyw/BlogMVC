@@ -18,8 +18,12 @@ namespace BlogMVC.Controllers
         [Route("{year:int}/{month:int}/{key}")]
         public IActionResult Post(int year, int month, string key)
         {
-            //return new ContentResult { Content = id };
-        
+            ViewBag.Title = "My Blog Post";
+            ViewBag.Posted = DateTime.Now;
+            ViewBag.Author = "Jess Chadwick";
+            ViewBag.Body = "This is a great blog post";
+;
+            return View();
         }
     }
 }
